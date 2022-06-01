@@ -6,7 +6,7 @@ This is course work from Python Web Service From Idea to Production.
 
 You can pull rss feeds from your favourite finnish newssites (Iltalehti, Iltasanomat, Helsingin Sanomat). You can decide the category of the news. Project is in alpha stage.
 
-Link to a production server can be found [here](http://jyrilampio.me/rss/)
+Link to a production server can be found [here](http://jyrilampio.me/rss/).
 ## Features
 
 The course work has CRUD, Login, Logout and register functions.

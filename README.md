@@ -29,3 +29,9 @@ All the users can still delete each other's entries. RSS reader works only with 
 ## Screenshots
 
 ![login](images/login.png)
+
+![register](images/register.png)
+
+![list](images/list.png)
+
+![create](images/create.png)

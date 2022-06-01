@@ -1,0 +1,37 @@
+{% extends "rss/base.html" %}
+
+{% block content %}
+
+<a href="{{ rss.get_absolute_url}}/rss/create/">Create new entry</a> - 
+
+{% if user.is_authenticated %}
+	<a href="../accounts/logout"> Logout <b> {{ user }} </b></a>
+{% else %}
+		<a href="../accounts/login">
+            <b> login </b>
+        </a>
+		-
+		<a href="../accounts/register">
+            <b> Register </b>
+        </a>
+{% endif %}
+
+<h2>Your saved RSS Searchs:</h2>
+
+{% for rss in object_list %}
+<h3>
+    <p>
+        <a href="{{ rss.get_absolute_url}}/?website={{ rss.website }}&category={{ rss.category }}">
+            <b>{{ rss.website }} - {{ rss.category }}</a> / 
+                <a href="{{ rss.get_absolute_url}}/update">UPDATE</a>
+                -
+                <a href="{{ rss.get_absolute_url}}/delete">DELETE</a>
+
+            </b>
+        </a>
+    </h3>
+
+{% empty %}
+<p>No entries yet. Feel free to add one!</p>
+{% endfor %}
+{% endblock content %}

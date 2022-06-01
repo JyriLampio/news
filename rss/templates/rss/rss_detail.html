@@ -1,0 +1,34 @@
+{% if feed %}
+
+<h2>{{ feed.feed.title }}</h2>
+
+{% if feed.entries %}
+
+{% for entry in feed.entries %}
+
+
+
+
+<h5>Headline: {{ entry.title }}</h5>
+
+<p class=“card-text”>Description: {{ entry.description }}</p>
+
+<a href=“{{ entry.link }}” class=“btn btn-primary”>Visit Link</a>
+
+</div>
+
+</div><p>{{ entry.published }}</p>
+
+ 
+
+{% endfor %}
+
+{% endif %}
+
+{% else %}
+
+<br />
+
+<p>Enter your favorite RSS feed above.</p>
+
+{% endif %}

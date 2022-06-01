@@ -10,7 +10,7 @@ You can pull rss feeds from your favourite finnish newssites (Iltalehti, Iltasan
 
 The course work has CRUD, Login, Logout and register functions.
 
-## bugs
+## Bugs
 
 All the users can still delete each other's entries. RSS reader works only with specific sites.
 
@@ -25,3 +25,7 @@ All the users can still delete each other's entries. RSS reader works only with 
 - ./manage.py migrate
 - ./manage.py createsuperuser
 - ./manage.py runserver
+
+## Screenshots
+
+![login](images/login.png)

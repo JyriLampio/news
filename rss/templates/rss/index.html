@@ -7,8 +7,8 @@
     <p>________________________________________________________________________</p>
     {% if feed.entries %}
         {% for entry in feed.entries %}
-            <h5>Headline: {{ entry.title }}</h5>
-            <p>Description: {{ entry.description }}</p>
+            <h4>{{ entry.title }}</h4>
+            <p>{{ entry.description }}</p>
             <a href={{ entry.link }}>Visit Link</a>
             <p>Published on {{ entry.published }}</p>
             <p>________________________________________________________________________</p>

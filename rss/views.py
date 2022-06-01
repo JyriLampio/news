@@ -24,17 +24,24 @@ class RssCreateView(LoginRequiredMixin, CreateView):
 		return super().form_valid(form)
 
 class RssUpdateView(LoginRequiredMixin, UpdateView):
-	model = models.Rss
+	#model = models.Rss
 	#fields = "__all__"
+	def get_queryset(self):
+		return models.Rss.objects.filter(owner=self.request.user)
+
 	fields = ['website', 'category']
 	success_url = "/rss/"
 
 	def form_valid(self, form):
 		form.instance.owner = self.request.user
 		return super().form_valid(form)
+
+
 		
 class RssDeleteView(LoginRequiredMixin, DeleteView):
-	model = models.Rss
+	#model = models.Rss
+	def get_queryset(self):
+		return models.Rss.objects.filter(owner=self.request.user)
 	success_url = "/rss/"
 	
 	def form_valid(self, form):

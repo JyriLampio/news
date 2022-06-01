@@ -35,3 +35,5 @@ All the users can still delete each other's entries. RSS reader works only with 
 ![list](images/list.png)
 
 ![create](images/create.png)
+
+![detail](images/detail.png)
